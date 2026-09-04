@@ -4,23 +4,38 @@ interface StartScreenProps {
 
 export function StartScreen({ onStart }: StartScreenProps) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-full p-6 bg-gray-50">
+    <div className="flex flex-col items-center justify-center min-h-full p-6">
       <div className="text-center max-w-sm">
-        <h1 className="text-4xl font-bold text-gray-900 mb-2">Bingo Mixer</h1>
-        <p className="text-lg text-gray-600 mb-8">Find your people!</p>
-        
-        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
-          <h2 className="font-semibold text-gray-800 mb-3">How to play</h2>
-          <ul className="text-left text-gray-600 text-sm space-y-2">
-            <li>• Find people who match the questions</li>
-            <li>• Tap a square when you find a match</li>
-            <li>• Get 5 in a row to win!</li>
+        <h1 className="noir-animate-flicker font-display text-5xl font-bold tracking-widest text-noir-paper uppercase mb-1">
+          Bingo Mixer
+        </h1>
+        <p className="noir-animate-fade-up [animation-delay:0.9s] font-typewriter text-noir-smoke text-sm mb-8">
+          case file: find your people
+        </p>
+
+        <div className="noir-animate-fade-up [animation-delay:1.1s] bg-noir-charcoal rounded-md p-6 border-l-4 border-noir-gold shadow-lg shadow-black/50 mb-8 text-left">
+          <h2 className="font-display font-semibold tracking-wide text-noir-gold-bright uppercase text-sm mb-3">
+            The Briefing
+          </h2>
+          <ul className="text-noir-paper/90 text-sm space-y-2">
+            <li>
+              <span className="text-noir-gold font-semibold mr-2">01 —</span>
+              Find people who match the questions
+            </li>
+            <li>
+              <span className="text-noir-gold font-semibold mr-2">02 —</span>
+              Tap a square when you find a match
+            </li>
+            <li>
+              <span className="text-noir-gold font-semibold mr-2">03 —</span>
+              Get 5 in a row to win!
+            </li>
           </ul>
         </div>
 
         <button
           onClick={onStart}
-          className="w-full bg-accent text-white font-semibold py-4 px-8 rounded-lg text-lg active:bg-accent-light transition-colors"
+          className="noir-animate-fade-up [animation-delay:1.3s] w-full bg-noir-gold text-noir-black font-display font-bold uppercase tracking-wide py-4 px-8 rounded-md text-lg shadow-[0_0_20px_rgba(201,162,39,0.35)] active:bg-noir-gold-bright transition-colors"
         >
           Start Game
         </button>

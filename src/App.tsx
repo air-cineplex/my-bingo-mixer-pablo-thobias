@@ -7,6 +7,7 @@ function App() {
   const {
     gameState,
     board,
+    winningLine,
     winningSquareIds,
     showBingoModal,
     startGame,
@@ -29,7 +30,7 @@ function App() {
         onReset={resetGame}
       />
       {showBingoModal && (
-        <BingoModal onDismiss={dismissModal} />
+        <BingoModal onDismiss={dismissModal} winningLine={winningLine} />
       )}
     </>
   );
